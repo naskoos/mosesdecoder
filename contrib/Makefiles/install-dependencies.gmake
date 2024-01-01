@@ -18,7 +18,7 @@ space +=
 # $(CWD) may contain space, safepath escapes them
 # Update: doesn't work, because the build scripts for some of the external packages
 # can't handle spaces in path names.
-safepath=$(subst $(space),\$(space),$1)
+safepath=$(subst $(space),/$(space),$1)
 
 # current working directory: bit of a hack to get the nfs-accessible
 # path instead of the local real path
